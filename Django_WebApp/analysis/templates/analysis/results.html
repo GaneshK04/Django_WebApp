@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Results</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f0f8ff; /* Light Alice Blue background for the page */
+        }
+        .card {
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.02);
+        }
+        .summary-statistics, .first-rows, .missing-values, .histogram {
+            margin-bottom: 20px;
+        }
+        .card-body {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        /* Different background colors for each section */
+        .summary-statistics-card {
+            background-color: #e6f9ff; /* Light Blue */
+        }
+        .first-rows-card {
+            background-color: #e6ffe6; /* Light Green */
+        }
+        .missing-values-card {
+            background-color: #fff5e6; /* Light Orange */
+        }
+        .histogram-card {
+            background-color: #f5e6ff; /* Light Purple */
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        th {
+            background-color: #f1f1f1;
+        }
+        td {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="summary-statistics">Summary Statistics</h2>
+        <div class="card summary-statistics-card">
+            <div class="card-body">
+                <p>Here are the summary statistics of your data:</p>
+                <pre>
+                <!-- Replace with your actual summary statistics -->
+                Count: 1000
+                Mean: 50
+                Median: 45
+                Std Dev: 10
+                </pre>
+            </div>
+        </div>
+
+        <h2 class="first-rows">First Rows</h2>
+        <div class="card first-rows-card">
+            <div class="card-body">
+                <p>Here are the first few rows of your dataset:</p>
+                <pre>
+                <!-- Replace with your actual first rows data -->
+                1, Alice, 30
+                2, Bob, 25
+                3, Charlie, 35
+                </pre>
+            </div>
+        </div>
+
+        <h2 class="missing-values">Missing Values</h2>
+        <div class="card missing-values-card">
+            <div class="card-body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Column</th>
+                            <th>Missing Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Replace with your actual missing values data -->
+                        <tr>
+                            <td>Gender</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Age</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Income</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <h2 class="histogram">Histogram</h2>
+        <div class="card histogram-card">
+            <div class="card-body">
+                <img src="data:image/png;base64,{{ hist_data }}" alt="Histogram" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
